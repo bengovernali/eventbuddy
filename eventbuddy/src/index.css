@@ -7,6 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   display: flex;
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 code {
@@ -27,4 +29,9 @@ code {
 
 #contact {
   margin-left: 5vw;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
 }

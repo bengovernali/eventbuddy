@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Container, Button } from "@mui/material";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ export default function Home() {
   return (
     <>
       <div>Welcome Home!</div>
-      <button onClick={logout}>Logout</button>
+      <Button color="primary" variant="contained" onClick={logout}>Logout</Button>
     </>
   );
 }
