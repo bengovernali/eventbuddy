@@ -7,6 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   display: flex;
+  background-color: #000000;
+  color: #FFFFFF;
+  width: 100%;
 }
 
 code {
@@ -15,10 +18,8 @@ code {
 }
 
 #root {
-  height: 100%;
-  display: flex;
+  height: 100vh;
   width: 100%;
-  margin: 5vw;
 }
 
 #error-page {
@@ -27,4 +28,9 @@ code {
 
 #contact {
   margin-left: 5vw;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
 }
