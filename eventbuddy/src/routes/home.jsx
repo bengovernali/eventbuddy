@@ -1,11 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Header from "../components/headers";
 import { Box } from "@mui/system";
 import { useNavigate } from "react-router-dom";
+import { atom, useRecoilState } from "recoil"
+
+const tokenState = atom({
+  key: "token",
+  default: ""
+})
 
 export default function Home() {
   const navigate = useNavigate()
-  const [token, setToken] = useState("");
+  const [token, setToken] = useRecoilState(tokenState);
   
   useEffect(() => {
     const hash = window.location.hash;

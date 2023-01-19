@@ -1,10 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useRecoilState, atom } from "recoil";
 import { Navigate } from "react-router-dom";
 import { Button, Box } from "@mui/material";
 import Header from "./components/headers";
 
+const tokenState = atom({
+  key: "token",
+  default: ""
+})
+
 function App() {
-  const [token, setToken] = useState("");
+  const [token, setToken] = useRecoilState(tokenState);
 
   useEffect(() => {
     const hash = window.location.hash;
