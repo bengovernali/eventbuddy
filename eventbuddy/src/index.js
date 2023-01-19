@@ -9,13 +9,14 @@ import ErrorPage from "./error-page";
 import App from "./App";
 import Home from "./routes/home";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { RecoilRoot } from "recoil";
 
 const theme = createTheme({
   palette: {
     primary: {
       main: "#1DB954",
       contrastText: "FFFFFF",
-      textColor: "#FFFFFF"
+      textColor: "#FFFFFF",
     },
     secondary: {
       main: "#000000",
@@ -44,7 +45,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
+      <RecoilRoot>
+        <RouterProvider router={router} />
+      </RecoilRoot>
     </ThemeProvider>
   </React.StrictMode>
 );
