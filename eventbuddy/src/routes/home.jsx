@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Container, Button } from "@mui/material";
+import Header from "../components/headers";
+import { Box } from "@mui/system";
 
 export default function Home() {
-  const navigate = useNavigate();
   const [token, setToken] = useState("");
   
   useEffect(() => {
@@ -22,16 +21,9 @@ export default function Home() {
     setToken(token);
   }, []);
 
-  const logout = () => {
-    window.localStorage.removeItem("token");
-    setToken("");
-    navigate("/")
-  };
-
   return (
-    <>
-      <div>Welcome Home!</div>
-      <Button color="primary" variant="contained" onClick={logout}>Logout</Button>
-    </>
+    <Box>
+      <Header />
+    </Box>
   );
 }

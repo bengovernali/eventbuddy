@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import { Button, Stack, Box } from "@mui/material";
+import { Button, Box } from "@mui/material";
 import Header from "./components/headers";
-import { flexbox } from "@mui/system";
 
 function App() {
   const [token, setToken] = useState("");
