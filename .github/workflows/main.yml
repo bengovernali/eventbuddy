@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - spotifyAuth/**
+      - .github/**
 jobs:
   deploy_source:
     name: build and deploy lambda
@@ -12,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./spotifyAuth
+        working-directory: spotifyAuth
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
