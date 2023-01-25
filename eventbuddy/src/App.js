@@ -6,8 +6,8 @@ import Header from "./components/headers";
 
 const tokenState = atom({
   key: "token",
-  default: ""
-})
+  default: "",
+});
 
 function App() {
   const [token, setToken] = useRecoilState(tokenState);
@@ -36,14 +36,16 @@ function App() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
       }}
     >
       <Header />
       {!token ? (
         <Button color="primary" variant="contained">
           <a
-            href={`${process.env.REACT_APP_AUTH_ENDPOINT}?client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}&response_type=${process.env.REACT_APP_RESPONSE_TYPE}`}
+            href={
+              "https://accounts.spotify.com/authorize?client_id=638f3d8085194625869dd89ac86eac6e&redirect_uri=https://develop.drpsil7pkaqr1.amplifyapp.com/&response_type=token"
+            }
           >
             Login to Spotify
           </a>
