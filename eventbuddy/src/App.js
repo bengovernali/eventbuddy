@@ -1,16 +1,10 @@
-import React, { useEffect } from "react";
-import { useRecoilState, atom } from "recoil";
+import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { Button, Box } from "@mui/material";
 import Header from "./components/headers";
 
-const tokenState = atom({
-  key: "token",
-  default: "",
-});
-
 function App() {
-  const [token, setToken] = useRecoilState(tokenState);
+  const [token, setToken] = useState("");
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -44,7 +38,8 @@ function App() {
         <Button color="primary" variant="contained">
           <a
             href={
-              "https://accounts.spotify.com/authorize?client_id=638f3d8085194625869dd89ac86eac6e&redirect_uri=https://develop.drpsil7pkaqr1.amplifyapp.com/&response_type=token"
+              //"https://accounts.spotify.com/authorize?client_id=638f3d8085194625869dd89ac86eac6e&redirect_uri=https://develop.drpsil7pkaqr1.amplifyapp.com/&response_type=token"
+              "https://accounts.spotify.com/authorize?client_id=638f3d8085194625869dd89ac86eac6e&redirect_uri=http://localhost:3000/callback/&response_type=token"
             }
           >
             Login to Spotify

@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./error-page";
 import App from "./App";
 import Home from "./routes/home";
+import Callback from "./routes/callback"
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { RecoilRoot } from "recoil";
 
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
     element: <Home />,
     errorElement: <ErrorPage />,
   },
+  {
+    path: "/callback",
+    element: <Callback />,
+    errorElement: <ErrorPage />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

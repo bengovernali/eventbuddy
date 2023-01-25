@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "eventbuddy5af52ca0": {}
+      },
+      "function": {
+        "eventbuddySpotifyAuth": {
+          "deploymentBucketName": "amplify-eventbuddy-staging-214952-deployment",
+          "s3Key": "amplify-builds/eventbuddySpotifyAuth-536453614775326f5356-build.zip"
+        }
       }
     }
   }
