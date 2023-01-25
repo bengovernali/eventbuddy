@@ -22,6 +22,8 @@ exports.handler = async (event) => {
       return res;
     });
 
+    console.log('HI')
+
   return {
     data,
   };
